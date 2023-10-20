@@ -12,17 +12,17 @@
 # example usage:
 
 "
-fastspar --iterations 100 --exclude_iterations 20 --threshold 0.1 --otu_table example_data.tsv --correlation observed_correlations.tsv --covariance observed_covariance.tsv
-# run fastspar on community composition data (for an example see example_data.tsv) to get observed pairwise correlations -> must be reads, not relative abundance
+fastspar --iterations 100 --exclude_iterations 20 --threshold 0.1 --otu_table community_profile.tsv --correlation observed_correlations.tsv --covariance observed_covariance.tsv
+# run fastspar on community composition data (for an example see community_profile.tsv) to get observed pairwise correlations -> must be reads, not relative abundance
 
 mkdir bootstrap_counts # create respository for bootstrap files
-fastspar_bootstrap --otu_table example_data.tsv --number 1000 --prefix bootstrap_counts/bootstrap # run 1000 bootstraps and save output into output repository
+fastspar_bootstrap --otu_table community_profile.tsv --number 1000 --prefix bootstrap_counts/bootstrap # run 1000 bootstraps and save output into output repository
 
 mkdir bootstrap_correlations # create respository for correlation and covariance files
 parallel fastspar --iterations 100 --exclude_iterations 20 --threshold 0.1 --otu_table {} --correlation bootstrap_correlations/cor_{/} --covariance bootstrap_correlations/cov_{/} -i 1 ::: bootstrap_counts/*
 # run fastspar on all bootstrap files and save correlation and covariance files in output repository
   
-fastspar_pvalues --otu_table example_data.tsv --correlation observed_correlations.tsv --prefix bootstrap_correlations/cor_bootstrap --permutations 1000 --outfile pvalues.tsv
+fastspar_pvalues --otu_table community_profile.tsv --correlation observed_correlations.tsv --prefix bootstrap_correlations/cor_bootstrap --permutations 1000 --outfile pvalues.tsv
 # calculate p.values for each observed correlation based on bootstrap correlations
 "
 # repeat for each data subsample, adding unique identifiers to all output files (e.g. pvalues_[1:1000].tsv and observed_correlations_[1:1000].tsv)
