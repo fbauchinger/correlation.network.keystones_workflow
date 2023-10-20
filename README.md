@@ -9,9 +9,9 @@ https://doi.org/10.1093/bioinformatics/bty734
 Github: https://github.com/scwatts/fastspar  
   
 workflow.R  
-R Script containing basic FastSpar usage and workflow for computing robust consensus network from multiple FastSpar runs  
+R Script containing basic FastSpar usage and workflow for computing a robust consensus network from multiple FastSpar runs  
   
 test_data:  
-community_profile.tsv ... example input data for FastSpar (estimated total reads output from MetaPhlAn3 - https://elifesciences.org/articles/65088)  
+community_profile.tsv ... example input data for FastSpar (containing total reads; OTUs are rows; samples are columns)  
 pvalues_[1:10].tsv ... example output files containing p-values of 10 different FastSpar runs (each run a random subsample from a bigger dataset)  
 observed_correlations_[1:10].tsv ... example output files containing observed correlations of 10 different FastSpar runs (each run a random subsample from a bigger dataset)
