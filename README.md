@@ -13,5 +13,5 @@ R Script containing basic FastSpar usage and workflow for computing a robust con
   
 test_data:  
 community_profile.tsv ... example input data for FastSpar (containing total reads; OTUs are rows; samples are columns)  
-pvalues_[1:10].tsv ... example output files containing p-values of 10 different FastSpar runs (each run a random subsample from a bigger dataset)  
-observed_correlations_[1:10].tsv ... example output files containing observed correlations of 10 different FastSpar runs (each run a random subsample from a bigger dataset)
+pvalues_[1:10].tsv ... example output files containing p-values of 10 different FastSpar runs (each run with a random subsample from a bigger dataset)  
+observed_correlations_[1:10].tsv ... example output files containing observed correlations of 10 different FastSpar runs (each run with a random subsample from a bigger dataset)
