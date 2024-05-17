@@ -169,7 +169,7 @@ tr<-transitivity(g,type="local")
 stats<-data.frame(OTU=names(degree), Degree=degree, betweenness.centrality=cb, closeness.centrality=cc, transitivity=tr)
 rownames(stats)<-NULL
 
-# calculate keystone potential per OTU ((Degree * Betweenness centrality) / Transitivity)
+# calculate keystone potential per OTU ((Degree * Transitivity) / Betweenness centrality)
 # depending on the relationship between Degree and Closeness centrality (see comment above), you may change to:
 # ((Degree * Betweenness centrality * Closeness centrality) / Transitivity)
 stats$keystone.potential<-((as.numeric(stats$Degree) *
