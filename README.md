@@ -10,6 +10,7 @@ Github: https://github.com/scwatts/fastspar
 
 FastSpar can be installed through conda: 
 conda install -c bioconda -c conda-forge fastspar
+for installation from source see https://github.com/scwatts/fastspar
 
 required R packages:
   - data.table
