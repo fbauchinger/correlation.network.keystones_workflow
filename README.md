@@ -29,5 +29,10 @@ Notes:
   - by default, closeness centrality is not used to calculate keystone potential, as it tends to strongly positively correlate with degree
     -> this can be changed within the wrapper script, but will decrease keystone potential by a factor of ~ 100 (closeness centrality values are < 1)
     
+log and error messages are provided in output/log/keystone.potential.wrapper_logs.txt
 
-  
+
+Troubleshooting:
+  - if libmkl_rt.so.2 can't be found: conda install mkl
+  - if "paralle fastspar" does not work: apt install parallel
+  - "fastspar" command not found: activate conda environment in your terminal  
