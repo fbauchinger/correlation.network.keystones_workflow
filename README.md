@@ -7,11 +7,28 @@ for more information on FastSpar see:
 Watts SC, Ritchie SC, Inouye M, Holt KE. 2019. FastSpar: rapid and scalable correlation estimation for compositional data. Bioinformatics 35:1064–1066.
 https://doi.org/10.1093/bioinformatics/bty734  
 Github: https://github.com/scwatts/fastspar  
+
+FastSpar can be installed through conda: 
+conda install -c bioconda -c conda-forge fastspar
+
+required R packages:
+  - data.table
+  - reshape2
+  - igraph
+  - dplyr
+
+The folder "workflow" contains a test community profile (community_profile.tsv in "input" directory), R scripts to subset the community profile (subset_data.R) and to calculate keystone potential (calculate_keystone.potential.R) in "R_scripts" folder
+and a wrapper script (keystone.potential.wrapper.sh) combining both scripts with FastSpar
   
-workflow.R  
-R Script containing basic FastSpar usage and workflow for computing a robust consensus network from multiple FastSpar runs  
+Usage:
+  - download the entire "workflow" folder
+  - run "bash keystone.potential.wrapper.sh" from within the "workflow" folder in a terminal to run the test case
+
+Notes:
+  - variables for FastSpar and subsampling can be set within the wrapper script (significance cutoff should be decreased and iterations should be increased for a real use case - see variables indicated with "TEST CASE")
+  - make sure the community profile is formated as follows: OTUs are rows, samples are columns, row containing the OTU tags is named "#OTU ID"
+  - by default, closeness centrality is not used to calculate keystone potential, as it tends to strongly positively correlate with degree
+    -> this can be changed within the wrapper script, but will decrease keystone potential by a factor of ~ 100 (closeness centrality values are < 1)
+    
+
   
-test_data:  
-community_profile.tsv ... example input data for FastSpar (containing total reads; OTUs are rows; samples are columns)  
-pvalues_[1:10].tsv ... example output files containing p-values of 10 different FastSpar runs (each run with a random subsample from a bigger dataset)  
-observed_correlations_[1:10].tsv ... example output files containing observed correlations of 10 different FastSpar runs (each run with a random subsample from a bigger dataset)
