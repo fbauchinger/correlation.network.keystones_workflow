@@ -34,5 +34,5 @@ log and error messages are provided in output/log/keystone.potential.wrapper_log
 
 Troubleshooting:
   - if libmkl_rt.so.2 can't be found: conda install mkl
-  - if "paralle fastspar" does not work: apt install parallel
+  - if "parallel fastspar" does not work: apt install parallel
   - "fastspar" command not found: activate conda environment in your terminal  
