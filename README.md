@@ -17,7 +17,7 @@ required R packages:
   - igraph
   - dplyr
 
-The folder "workflow" contains a test community profile (community_profile.tsv in "input" directory), R scripts to subset the community profile (subset_data.R) and to calculate keystone potential (calculate_keystone.potential.R) in "R_scripts" folder and a wrapper script (keystone.potential.wrapper.sh) combining both scripts with FastSpar
+The folder "workflow" contains a test community profile (community_profile.tsv in "input" directory), R scripts to subset the community profile (subset_data.R) and to calculate keystone potential (calculate_keystone.potential.R) in "R_scripts" directory and a wrapper script (keystone.potential.wrapper.sh) combining both scripts with FastSpar
   
 Usage:
   - download the entire "workflow" folder
