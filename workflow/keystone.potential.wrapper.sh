@@ -13,10 +13,7 @@
 
 ########################################################
 #
-# FastSpar can be installed through conda:
-# conda install -c bioconda -c conda-forge fastspar
-#
-# for detailed documentation see
+# FastSpar can be installed through conda or from source:
 # https://github.com/scwatts/fastspar
 #
 ########################################################
