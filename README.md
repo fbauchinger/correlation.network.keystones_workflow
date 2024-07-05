@@ -19,12 +19,12 @@ required R packages:
 The folder "workflow" contains a test community profile (community_profile.tsv in "input" directory), R scripts to subset the community profile (subset_data.R) and to calculate keystone potential (calculate_keystone.potential.R) in "R_scripts" directory and a wrapper script (keystone.potential.wrapper.sh) combining both scripts with FastSpar
 
     
-Usage:
+## Usage:
   - download the entire "workflow" folder
   - run "bash keystone.potential.wrapper.sh" from within the "workflow" folder in a terminal to run the test case
 
    
-Notes:
+## Notes:
   - variables for FastSpar and subsampling can be set within the wrapper script (significance cutoff should be decreased and iterations should be increased for a real use case - see variables indicated with "TEST CASE")
   - make sure the community profile is formated as follows: OTUs are rows, samples are columns, row containing the OTU tags is named "#OTU ID"
   - by default, closeness centrality is not used to calculate keystone potential, as it tends to strongly positively correlate with degree
@@ -35,7 +35,7 @@ log and error messages are provided in output/log/keystone.potential.wrapper_log
 
 
    
-Troubleshooting:  
+## Troubleshooting:  
   - if "parallel fastspar" does not work: apt install parallel  
     
   Problems with conda installation of FastSpar: 
