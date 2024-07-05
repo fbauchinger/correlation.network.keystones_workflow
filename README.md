@@ -32,10 +32,12 @@ log and error messages are provided in output/log/keystone.potential.wrapper_log
 
 
 
-Troubleshooting:
-  - if "parallel fastspar" does not work: apt install parallel
+Troubleshooting:  
+  - if "parallel fastspar" does not work: apt install parallel  
+    
+  Problems with conda installation of FastSpar: 
   - "fastspar" command not found: activate conda environment in your terminal 
   - if libmkl_rt.so.2 can't be found: conda install mkl
-      - this seems to be an issue with conda (see also discussion here: https://github.com/davisking/dlib/issues/587)
+      - this seems to be an issue with conda (see also discussion here: https://github.com/davisking/dlib/issues/587)  
         if the issues persists, try installing FastSpar from source instead
  
