@@ -8,9 +8,7 @@ Watts SC, Ritchie SC, Inouye M, Holt KE. 2019. FastSpar: rapid and scalable corr
 https://doi.org/10.1093/bioinformatics/bty734  
 Github: https://github.com/scwatts/fastspar  
 
-FastSpar can be installed through conda: 
-conda install -c bioconda -c conda-forge fastspar  
-for installation from source see https://github.com/scwatts/fastspar
+FastSpar can be installed through conda or from source (see also notes below): see https://github.com/scwatts/fastspar
 
 required R packages:
   - data.table
@@ -33,7 +31,11 @@ Notes:
 log and error messages are provided in output/log/keystone.potential.wrapper_logs.txt
 
 
+
 Troubleshooting:
-  - if libmkl_rt.so.2 can't be found: conda install mkl
   - if "parallel fastspar" does not work: apt install parallel
-  - "fastspar" command not found: activate conda environment in your terminal  
+  - "fastspar" command not found: activate conda environment in your terminal 
+  - if libmkl_rt.so.2 can't be found: conda install mkl
+      - this seems to be an issue with conda (see also discussion here: https://github.com/davisking/dlib/issues/587)
+        if the issues persists, try installing FastSpar from source instead
+ 
