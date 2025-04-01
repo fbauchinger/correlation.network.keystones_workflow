@@ -1,6 +1,6 @@
 # correlation.network.keystones_workflow
 
-published in: TBD  
+published in: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2024.1454634/full  
 workflow for computing significant and robust correlation networks from subsampled community profiles with FastSpar 
   
 for more information on FastSpar see:  
